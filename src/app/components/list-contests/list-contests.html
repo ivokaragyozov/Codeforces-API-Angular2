@@ -1,0 +1,13 @@
+<button (click)="goBack()">Back</button>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Rank</th>
+		<th>Rating Change</th>
+	</tr>
+	<tr *ngFor="let contest of contests">
+		<td>{{contest.contestName}}</td>
+		<td>{{contest.place}}</td>
+		<td [ngClass]="contest.ratingChange > 0 ? 'green' : 'red'">{{contest.ratingChange}}</td>
+	</tr>
+</table>
